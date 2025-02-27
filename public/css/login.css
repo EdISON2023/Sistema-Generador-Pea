@@ -1,0 +1,36 @@
+.fondo{
+    height: 100vh;
+    background-image: url(../resources/images/global/fondologin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.centrar{
+    position: absolute;
+    top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-login{
+    height: 80vh;
+    display: flex;
+    width: 80vw;
+    max-width: 700px;
+}
+.input{
+    width: 85%;
+}
+/*global*/
+.form-control{
+    border-color: #FF6900;
+}
+label{
+    color: #0058A0;
+}
+.text-primario{
+    color: #3d3d3d;
+}

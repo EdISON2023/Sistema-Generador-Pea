@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Excluir la carpeta Services y su contenido de las reglas de reescritura
+    RewriteCond %{REQUEST_URI} !^/src/Services/
+    
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([^/]+)/?$ index.php?action=$1 [L,QSA]
+</IfModule>

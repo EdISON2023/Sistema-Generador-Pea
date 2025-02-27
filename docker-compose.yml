@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # Mapea el puerto 80 del contenedor al puerto 8080 en localhost
+    volumes:
+      - ./src:/var/www/html/src # Monta el directorio actual en el contenedor
+      - ./logs:/var/www/html/logs # Monta el directorio actual en el contenedor
+    environment:
+      APP_PROYECTO: ${APP_PROYECTO} # Si tienes variables de entorno en un .env
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017" # Expone el puerto 27017 de MongoDB
+    volumes:
+      - mongo_data:/data/db # Monta un volumen persistente para la base de datos
+      - ./mongo-init:/docker-entrypoint-initdb.d
+
+volumes:
+  mongo_data:

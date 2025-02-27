@@ -1,0 +1,44 @@
+.cuadroSidebar{
+    width: 40px; 
+    height: 93vh;
+    transition: all 1s;
+    position: relative;
+    z-index: 10;
+}
+
+.cuadroSidebar.toggel{
+    width: 250px;
+}
+
+.text-sidebar-option{
+    min-width: 200px;
+}
+
+.separador{
+    height: 2px;
+    background-color: white;
+}
+
+.botones:hover,
+.botones:focus,
+.botones:active,
+.botones:active:focus,
+.botones:not(:focus):not(:active){
+    color: #FF6900;
+}
+
+.rotar-imagen-inicio {
+    transform: rotate(0deg);
+    margin-left: 0;
+    transition: all 1s;
+}
+
+.rotar-imagen {
+    transform: rotate(180deg);
+    margin-left: 195px;
+    transition: all 1s;
+}
+
+.activesidebar{
+    background-color: #0058A0 !important;
+}
